@@ -9,7 +9,25 @@ The helm chart is a fork of below repository with few modification in the below 
 https://github.com/vromero/activemq-artemis-helm
 
 # Configuration
-To see the lists of configurable parameters of this chart and their default values please refer to above repo link.
+The following tables lists the configurable parameters for the chart and their default values.
+
+| Parameter                            | Description                           | Default                                                    |
+| ------------------------------------ | ------------------------------------- | ---------------------------------------------------------- |
+| `imageTag`                           | `vromero/activemq-artemis` image tag. | 2.15.0                                        |
+| `imagePullPolicy`                    | Image pull policy                     | `IfNotPresent`                                             |
+| `artemisUser`                        | Username of new user to create.       | `artemis`                                                  |
+| `artemisPassword`                    | Password for the new user.            | `artemis`                                            |
+| `replicas`                           | Number of nodes in the cluster.       | 2                                                          |
+| `persistence.enabled`                | Create a volume to store data         | true                                                       |
+| `persistence.size`                   | Size of persistent volume claim       | 8Gi RW                                                     |
+| `persistence.storageClass`           | Type of persistent volume claim       | nil  (uses alpha storage class annotation)                 |
+| `persistence.accessMode`             | ReadWriteOnce or ReadOnly             | ReadWriteOnce                                              |
+| `persistence.testJournalPerformance` | See docker image docs                 | `AUTO`                                                     |
+| `resources.request.memory`           | Memory resource requests/limits       | `256Mi`                                                    |
+| `resources.request.cpu`              | CPU/Memory resource requests/limits   | `100m`                                                     |
+
+For more details please visit below repo link.<br>
+https://github.com/vromero/activemq-artemis-helm
 
 # Installing the Chart
 ```bash
