@@ -13,7 +13,7 @@ The following tables lists the configurable parameters for the chart and their d
 
 | Parameter                            | Description                           | Default                                                    |
 | ------------------------------------ | ------------------------------------- | ---------------------------------------------------------- |
-| `imageTag`                           | `vromero/activemq-artemis` image tag. | 2.15.0                                        |
+| `imageTag`                           | `xl-docker.xebialabs.com/artemis-docker-image` image tag. | 2.15.0                                        |
 | `imagePullPolicy`                    | Image pull policy                     | `IfNotPresent`                                             |
 | `artemisUser`                        | Username of new user to create.       | `artemis`                                                  |
 | `artemisPassword`                    | Password for the new user.            | `artemis`                                            |
